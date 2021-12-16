@@ -1,9 +1,15 @@
 const express = require("express");
 const path = require("path");
+const cors = require("cors");
 
 const app = express();
 
 const tours = require("./api/Tours");
+
+const corsOptions = {
+  origin: "http://localhost:3000",
+  optionsSuccessStatus: 200,
+};
 
 // Body Parser Middleware
 app.use(express.json());
@@ -11,6 +17,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, "public"), { extensions: [ "html" ] }));
+
+app.use(cors(corsOptions));
 
 // app.get("/api", (req, res) => {
 //   res.status(200).send(tours);

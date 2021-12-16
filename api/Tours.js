@@ -1,4 +1,4 @@
-const tours = [
+[
   {
     id: 1,
     name: "Cinque Terre Villages & The Italian Riviera",
@@ -500,5 +500,3 @@ const tours = [
       "Stunning evening view of the old Stone Bridge spanning the river with the Basilica del Pilar in the background in Zaragoza",
   },
 ];
-
-module.exports = tours;
