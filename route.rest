@@ -1,0 +1,39 @@
+GET http://localhost:4000/api
+
+###
+
+GET http://localhost:4000/api/61bbd305289b266dc24cf427
+
+###
+
+POST http://localhost:4000/api
+Content-Type: application/json
+
+{
+    "name": "Walking Tour",
+    "city": "Dublin",
+    "country": "Ireland",
+    "price": 7000,
+    "hours": 4,
+    "rating": 3.5,
+    "guided_tour": true,
+    "group_size": "medium",
+    "entrance_fees_included": false,
+    "description": "A great tour",
+    "image_url": "photo.jpg",
+    "image_alt": "Ireland's beauty"
+}
+
+###
+
+PATCH http://localhost:4000/api/61bbd305289b266dc24cf427
+Content-Type: application/json
+
+{
+    "name": "Neuschwanstein Cadstle & Hohenschwangau Village",
+    "hours": 8.5
+}
+
+###
+
+DELETE http://localhost:4000/api/61bc14de6434903954279aed
