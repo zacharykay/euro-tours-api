@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
     name: body.name,
     city: body.city,
     country: body.country,
-    price: body.price,
+    price: body.price * 100,
     hours: body.hours,
     rating: body.rating,
     guided_tour: body.guided_tour,
@@ -64,12 +64,17 @@ router.patch("/:id", getTour, async (req, res) => {
     const bodyValues = Object.values(body);
 
     bodyKeys.map((key, index) => {
+      // Check to make sure no new keys are being added to database schema
       const matchingKey = tourKeys.includes(key);
       if (!matchingKey) {
         throw {
           notification: `Mismatching data detected, specified key "${key}" does not exist in database schema`,
         };
       }
+      if (key === "price" && res.tour[key] !== bodyValues[index] * 100) {
+        bodyValues[index] = bodyValues[index] * 100;
+      }
+
       res.tour[key] = bodyValues[index];
     });
 

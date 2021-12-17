@@ -1,6 +1,5 @@
 [
   {
-    id: 1,
     name: "Cinque Terre Villages & The Italian Riviera",
     city: "Florence",
     country: "Italy",
@@ -18,7 +17,6 @@
       "Sunset view overlooking the idyllic Cinque Terre Village of Manarola above the coast from the Manarola Scenic Viewpoint",
   },
   {
-    id: 2,
     name: "Neuschwanstein Castle & Hohenschwangau Village",
     city: "Munich",
     country: "Germany",
@@ -36,7 +34,6 @@
       "Schloss Neuschwanstein Castle rising above autumn trees seen from Marienbruecke Bridge in Hohenschwangau, Bavaria, Germany",
   },
   {
-    id: 3,
     name: "Venice Canals Photography Tour",
     city: "Florence",
     country: "Italy",
@@ -54,7 +51,6 @@
       "Gondola boats along the water in front of St. Mark's Square with St. Mark's Campanile towering above it in Venice, Italy",
   },
   {
-    id: 4,
     name: "Zaanse Schans Windmills & Dutch Countryside",
     city: "Amsterdam",
     country: "Netherlands",
@@ -72,7 +68,6 @@
       "Lovely colored windmills seen along the water in the Dutch countryside of Zaanse Schans, Netherlands",
   },
   {
-    id: 5,
     name: "Stonehenge Mystical Stargazing Experience",
     city: "London",
     country: "England",
@@ -90,7 +85,6 @@
       "Stunning cloudy day view of the ancient Stonehenge, a wonder of the world, located in Amesbury, England",
   },
   {
-    id: 6,
     name: "Medieval Bruges & The Hanseatic League",
     city: "Amsterdam",
     country: "Netherlands",
@@ -108,7 +102,6 @@
       "Beautiful and colorful medieval buildings lined up along Bruges's massive Markt Square",
   },
   {
-    id: 7,
     name: "Lake Lucerne & The Swiss Alps",
     city: "Munich",
     country: "Germany",
@@ -126,7 +119,6 @@
       "View above the lovely historic buildings along the water in the Alstadt Luzern Old Town in Lucerne, Switzerland",
   },
   {
-    id: 8,
     name: "Shakespeare's Birthplace Experience",
     city: "London",
     country: "England",
@@ -144,7 +136,6 @@
       "Thatched roof half-timbered house in which William Shakespeare's wife grew up, located in Stratford-upon-Avon",
   },
   {
-    id: 9,
     name: "Barcelona Walking Tour",
     city: "Barcelona",
     country: "Spain",
@@ -162,7 +153,6 @@
       "Stunningly beautiful shot of Gaudi's La Sagrada Familia Basilica partially hidden behind trees and flowers in Barcelona",
   },
   {
-    id: 10,
     name: "Castles & Chateaus of Greater Paris",
     city: "Paris",
     country: "France",
@@ -180,7 +170,6 @@
       "Chateau de Pierrefonds Castle Aerial View, Pierrefonds, Greater Paris, France",
   },
   {
-    id: 11,
     name: "Bath: Ancient Roman & Modern Bathhouses",
     city: "London",
     country: "England",
@@ -198,7 +187,6 @@
       "Stunning view of the old Pulteney Bridge spanning the river running through Bath, England with the Pulteney Weir in the foreground",
   },
   {
-    id: 12,
     name: "Alpine Villages of Austria Tour",
     city: "Munich",
     country: "Germany",
@@ -216,7 +204,6 @@
       "Highly photogenic viewpoint of the village of Hallstatt set amongst the Hallstattersee lake and tall mountains",
   },
   {
-    id: 13,
     name: "Highlights of Brussels Tour",
     city: "Amsterdam",
     country: "Netherlands",
@@ -234,7 +221,6 @@
       "Stunning assortment of colorful vast carpets of flower art laid out amongst Brussels's massive Grand Place Central Square",
   },
   {
-    id: 14,
     name: "Alsace Region Medieval Villages",
     city: "Paris",
     country: "France",
@@ -252,7 +238,6 @@
       "Iconic colorful half-timbered houses in the village of Eguisheim, Alsace region of France near Colmar",
   },
   {
-    id: 15,
     name: "Valencia: Medieval to Modern Architecture",
     city: "Barcelona",
     country: "Spain",
@@ -270,7 +255,6 @@
       "Stunning ultra-contemporary architectural masterpiece of the City of Arts and Sciences in Valencia, which somewhat resembles a whale skeleton",
   },
   {
-    id: 16,
     name: "Leaning Tower of Pisa & City Tour",
     city: "Florence",
     country: "Italy",
@@ -288,7 +272,6 @@
       "Iconic Leaning Tower of Pisa seen beside the Duomo di Pisa Cathedral in Pisa, Italy",
   },
   {
-    id: 17,
     name: "Canal Walking Tour",
     city: "Amsterdam",
     country: "Netherlands",
@@ -306,7 +289,6 @@
       "Lovely evening views looking down a Central Amsterdam canal lined with historic row houses and trees, with an oncoming tour boat, seen from the Preisensluis Bridge",
   },
   {
-    id: 18,
     name: "Medici Walking Tour of Firenze",
     city: "Florence",
     country: "Italy",
@@ -324,7 +306,6 @@
       "Sunset view from Piazzale Michelangelo over Arno River and rustic buildings of Florence, Italy and Florence Cathedral's Dome",
   },
   {
-    id: 19,
     name: "Medieval Mont Saint-Michel & St. Malo",
     city: "Paris",
     country: "France",
@@ -342,7 +323,6 @@
       "Castle-like Mont Saint-Michel abbey on a tiny island rising above the sea",
   },
   {
-    id: 20,
     name: "Romeo & Juliet Walking Tour of Verona",
     city: "Florence",
     country: "Italy",
@@ -360,7 +340,6 @@
       "Golden hour colors lighting up the Ponte Scaligero bridge over the Adige River to the Castelvecchio Castle in Verona, Italy",
   },
   {
-    id: 21,
     name: "Cliffs of Dover & Medieval Castles",
     city: "London",
     country: "England",
@@ -378,7 +357,6 @@
       "Side-view of the iconic White Cliffs of Dover seen from atop the green grassy cliffs in Dover, Kent, England",
   },
   {
-    id: 22,
     name: "Mozart & The Sound of Music Tour of Salzburg",
     city: "Munich",
     country: "Germany",
@@ -396,7 +374,6 @@
       "Stunning view of the massive Hohensalzburg hilltop fortified village, which sits high above the baroque buildings of Old Salzburg below, seen behind the river which runs through Salzburg, Austria",
   },
   {
-    id: 23,
     name: "Medieval Carcassonne & Occitanie Castles",
     city: "Barcelona",
     country: "Spain",
@@ -413,7 +390,6 @@
     image_alt: "Aerial view of the fortified medieval citadel of Carcassonne, France",
   },
   {
-    id: 24,
     name: "Modern Architectural Tour of Rotterdam",
     city: "Amsterdam",
     country: "Netherlands",
@@ -430,7 +406,6 @@
     image_alt: "Markthal marketplace exterior during the day in Rotterdam, Netherlands",
   },
   {
-    id: 25,
     name: "Iconic Sights of Paris Walking Tour",
     city: "Paris",
     country: "France",
@@ -446,7 +421,6 @@
     image_alt: "Eiffel Tower at Sunset, Paris, France",
   },
   {
-    id: 26,
     name: "Cotswold Villages & The English Countryside",
     city: "London",
     country: "England",
@@ -464,7 +438,6 @@
       "Iconic Arlington Row of country homes along the road at Bilbury, a small Cotswolds village",
   },
   {
-    id: 27,
     name: "Munich Walking Tour",
     city: "Munich",
     country: "Germany",
@@ -482,7 +455,6 @@
       "View overlooking the medieval buildings around Marienplatz square, the main square in Munich, Germany in Bavaria",
   },
   {
-    id: 28,
     name: "Charming & Rustic Zaragoza",
     city: "Barcelona",
     country: "Spain",
