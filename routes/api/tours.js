@@ -6,7 +6,7 @@ const router = express.Router();
 
 const Tour = require("../../models/tours");
 
-const CORSAllow = process.env.CORS || "*";
+const CORSAllow = process.env.CORS || "http://localhost:3000";
 
 // Get All Tours
 router.get("/", async (req, res) => {

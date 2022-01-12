@@ -4,21 +4,53 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 
+const session = require("express-session");
+const MongoStore = require("connect-mongo");
+
+// const localDbUrl = process.env.DATABASE_URL;
+// const atlasDbUrl = process.env.ATLAS_DB_URL;
+// const prodUrl = "https://eurotours.netlify.app";
+
 const app = express();
 
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+mongoose.connect(process.env.ATLAS_DB_URL, { useNewUrlParser: true });
 const db = mongoose.connection;
 
 db.on("error", (err) => console.error("ERROR:", err));
 // Once connected to database
 db.once("open", () => console.log("Connected to Database"));
 
+// CORS Configuration Onject
 const corsOptions = {
   origin: "http://localhost:3000",
   optionsSuccessStatus: 200,
 };
+
+// MongoDB Atlas Store Configuration Object
+const store = {
+  mongoUrl: process.env.ATLAS_DB_URL,
+  secret: process.env.STORE_SECRET,
+  touchAfter: 60 * 60 * 24,
+};
+
+// MongoDB Atlas Session Configuration Object
+const sessionConfig = {
+  store: MongoStore.create(store),
+  name: "session",
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    httpOnly: true,
+    expires: Date.now() + 100 * 60 * 60 * 24 * 7,
+    maxAge: 1000 * 60 * 60 * 24 * 7,
+  },
+};
+
+// MongoDB Atlas Middleware
+app.use(session(sessionConfig));
 
 // Body Parser Middleware
 app.use(express.json());
