@@ -22,9 +22,9 @@ db.on("error", (err) => console.error("ERROR:", err));
 // Once connected to database
 db.once("open", () => console.log("Connected to Database"));
 
-// CORS Configuration Onject
+// CORS Configuration Object
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: process.env.CORS || "http://localhost:3000",
   optionsSuccessStatus: 200,
 };
 
