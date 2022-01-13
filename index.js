@@ -23,7 +23,7 @@ const mongoose = require("mongoose");
 // CORS Configuration Object
 const corsOptions = {
   // origin: process.env.CORS || "http://localhost:3000",
-  origin: process.env.CORS || "http://localhost:3000" || "https://eurotours.netlify.app",
+  origin: process.env.CORS || "https://eurotours.netlify.app",
   credentials: true,
   optionsSuccessStatus: 200,
 };
@@ -81,13 +81,13 @@ app.use(cors(corsOptions));
 
 app.use("/api", require("./routes/api/tours"));
 
-const PORT = process.env.PORT;
+// const PORT = process.env.PORT;
 
-app.listen(PORT, () => console.log(`Server running on Port ${PORT}`));
+// app.listen(PORT, () => console.log(`Server running on Port ${PORT}`));
 
 
 mongoose.connect(process.env.ATLAS_DB_URL, { useNewUrlParser: true }).then(() => {
-  app.listen(process.env.PORT || 5000);
+  app.listen(process.env.PORT || 4000 , () => console.log(`Server running on Port ${4000}`));
 }).catch((err) => {
   console.log(err)
 });
@@ -97,17 +97,3 @@ db.on("error", (err) => console.error("ERROR:", err));
 // Once connected to database
 db.once("open", () => console.log("Connected to Database"));
 
-// mongoose
-// 	.connect(
-// 		`mongodb+srv://${process.env.DB_USER}:${process.env
-// 			.DB_PASSWORD}@cluster0.j8jhi.mongodb.net/${process.env
-// 			.DB_NAME}?retryWrites=true&w=majority`,
-// 		{ useNewUrlParser: true }
-// 	)
-// 	.then(() => {
-// 		// Default Heroku Port or Default Development Port
-// 		app.listen(process.env.PORT || 5000);
-// 	})
-// 	.catch((err) => {
-// 		console.log(err);
-// 	});
