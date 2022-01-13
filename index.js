@@ -23,7 +23,9 @@ const mongoose = require("mongoose");
 // CORS Configuration Object
 const corsOptions = {
   // origin: process.env.CORS || "http://localhost:3000",
-  origin: process.env.CORS || "https://eurotours.netlify.app",
+  origin: "https://eurotours.netlify.app",
+  // origin: process.env.CORS_DOMAIN || "https://eurotours.netlify.app",
+
   credentials: true,
   optionsSuccessStatus: 200,
 };
@@ -51,7 +53,7 @@ const sessionConfig = {
 
 app.use(function(req, res, next) {
   //Enabling CORS
-  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Origin", "https://eurotours.netlify.app");
   res.header("Access-Control-Allow-Credentials", "true");
   res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
   res.header(
