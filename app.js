@@ -54,11 +54,16 @@ const sessionConfig = {
 app.use(function(req, res, next) {
   //Enabling CORS
   res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Credentials", "true");
   res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization"
   );
+  //   Access-Control-Allow-Origin : http://localhost:3000
+  // Access-Control-Allow-Credentials : true
+  // Access-Control-Allow-Methods : GET, POST, OPTIONS
+  // Access-Control-Allow-Headers : Origin, Content-Type, Accept
   next();
 });
 
