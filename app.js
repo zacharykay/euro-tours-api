@@ -25,7 +25,7 @@ db.once("open", () => console.log("Connected to Database"));
 // CORS Configuration Object
 const corsOptions = {
   // origin: process.env.CORS || "http://localhost:3000",
-  origin: "https://eurotours.netlify.app/",
+  origin: "*",
   optionsSuccessStatus: 200,
 };
 
