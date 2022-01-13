@@ -7,24 +7,17 @@ const cors = require("cors");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 
-// const localDbUrl = process.env.DATABASE_URL;
-// const atlasDbUrl = process.env.ATLAS_DB_URL;
-// const prodUrl = "https://eurotours.netlify.app";
+const prodUrl = "https://eurotours.netlify.app";
 
 const app = express();
 
 const mongoose = require("mongoose");
 
-// mongoose.connect(process.env.ATLAS_DB_URL, { useNewUrlParser: true });
-// const db = mongoose.connection;
-
 
 
 // CORS Configuration Object
 const corsOptions = {
-  // origin: process.env.CORS || "http://localhost:3000",
-  origin: "https://eurotours.netlify.app",
-  // origin: process.env.CORS_DOMAIN || "https://eurotours.netlify.app",
+  origin:  process.env.CORS_DOMAIN || prodUrl,
 
   credentials: true,
   optionsSuccessStatus: 200,
@@ -53,17 +46,13 @@ const sessionConfig = {
 
 app.use(function(req, res, next) {
   //Enabling CORS
-  res.header("Access-Control-Allow-Origin", "https://eurotours.netlify.app");
+  res.header("Access-Control-Allow-Origin", process.env.CORS_DOMAIN || prodUrl);
   res.header("Access-Control-Allow-Credentials", "true");
   res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization"
   );
-  //   Access-Control-Allow-Origin : http://localhost:3000
-  // Access-Control-Allow-Credentials : true
-  // Access-Control-Allow-Methods : GET, POST, OPTIONS
-  // Access-Control-Allow-Headers : Origin, Content-Type, Accept
   next();
 });
 
@@ -83,10 +72,6 @@ app.use(cors(corsOptions));
 
 app.use("/api", require("./routes/api/tours"));
 
-// const PORT = process.env.PORT;
-
-// app.listen(PORT, () => console.log(`Server running on Port ${PORT}`));
-
 
 mongoose.connect(process.env.ATLAS_DB_URL, { useNewUrlParser: true }).then(() => {
   app.listen(process.env.PORT || 4000 , () => console.log(`Server running on Port ${4000}`));
@@ -98,4 +83,6 @@ const db = mongoose.connection;
 db.on("error", (err) => console.error("ERROR:", err));
 // Once connected to database
 db.once("open", () => console.log("Connected to Database"));
+
+module.exports.url = prodUrl;
 

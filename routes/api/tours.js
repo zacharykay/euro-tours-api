@@ -1,18 +1,15 @@
-const fs = require("fs");
-const path = require("path");
-
 const express = require("express");
 const router = express.Router();
 
 const Tour = require("../../models/tours");
 
-// const CORSAllow = process.env.CORS;
+const url = require('../../index');
 
 // Get All Tours
 router.get("/", async (req, res) => {
   try {
     const tours = await Tour.find();
-    res.header("Access-Control-Allow-Origin", "https://eurotours.netlify.app").json(tours);
+    res.header("Access-Control-Allow-Origin", process.env.CORS_DOMAIN || url.prodUrl).json(tours);
   } catch (err) {
     res.status(500).json({ message: err.message, notification: "Server Error" });
   }
@@ -42,10 +39,8 @@ router.post("/", async (req, res) => {
   });
   try {
     const newTour = await tour.save();
-    // Status 201 means created/posted successfully
     res.status(201).json(newTour);
   } catch (err) {
-    // User input error
     res.status(400).json({ message: err.message });
   }
 });
