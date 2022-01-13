@@ -26,6 +26,7 @@ db.once("open", () => console.log("Connected to Database"));
 const corsOptions = {
   // origin: process.env.CORS || "http://localhost:3000",
   origin: "*",
+  credentials: true,
   optionsSuccessStatus: 200,
 };
 
