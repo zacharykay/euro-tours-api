@@ -12,12 +12,9 @@ const Tour = require("../../models/tours");
 router.get("/", async (req, res) => {
   try {
     const tours = await Tour.find();
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-    );
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE").json(tours);
+    res
+      .header("Access-Control-Allow-Origin", "https://eurotours.netlify.app")
+      .json(tours);
   } catch (err) {
     res.status(500).json({ message: err.message, notification: "Server Error" });
   }
